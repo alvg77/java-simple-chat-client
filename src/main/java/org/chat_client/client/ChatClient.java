@@ -1,4 +1,4 @@
-package org.alekogeorgiev.client;
+package org.chat_client.client;
 
 import java.io.*;
 import java.net.*;
