@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23df1f5d-d49c-4138-bf85-baaa5664546b" name="Changes" comment="change package name">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/alekogeorgiev/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat_client/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/alekogeorgiev/client/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat_client/client/ChatClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat_client/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat_client/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1697899244759</updated>
       <workItem from="1697899245902" duration="14734000" />
-      <workItem from="1697971945725" duration="1490000" />
+      <workItem from="1697971945725" duration="2252000" />
     </task>
     <task id="LOCAL-00001" summary="chat server">
       <created>1697917901489</created>
