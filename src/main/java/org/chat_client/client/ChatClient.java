@@ -118,8 +118,7 @@ public class ChatClient {
     }
 
     private void sendMessage(String data) {
-        try {
-            DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream());
+        try (DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream())) {
             outputStream.writeBytes(data + '\n');
         } catch (IOException ioe) {
             throw new RuntimeException(ioe);
