@@ -14,24 +14,45 @@ public class ChatClient {
         this.userUsername = "";
     }
     public void connect() {
-        System.out.println("Connect to the server with /connect <hostname> <port>");
 
         while (true) {
+            try {
+                Runtime.getRuntime().exec("clear");
+            } catch (IOException ioe) {
+                System.out.println("Failed to clear the screen");
+            }
+
+            System.out.println("Connect to the server with /connect <hostname> <port>");
+            System.out.println("Type /quit to exit the program.");
             String command = scanner.nextLine();
             String[] cmdArr = command.split(" ");
 
-            if (!cmdArr[0].equals("/connect") || cmdArr.length != 3) {
-                System.out.println("Invalid command!");
-                continue;
-            }
-
-            try {
-                socket.connect(new InetSocketAddress(cmdArr[1], Integer.parseInt(cmdArr[2])));
-                chat();
-            } catch (IOException ioe) {
-                throw new RuntimeException(ioe);
-            } catch (NumberFormatException nfe) {
-                System.out.println("Invalid port number!");
+            if (cmdArr[0].equals("/connect") || cmdArr.length == 3) {
+                try {
+                    socket.connect(new InetSocketAddress(cmdArr[1], Integer.parseInt(cmdArr[2])));
+                    chat();
+                } catch (IOException ioe) {
+                    if (ioe instanceof ConnectException) {
+                        System.out.println("Failed to connect to the server! Press any key to continue...");
+                        scanner.nextLine();
+                    } else if (ioe instanceof UnknownHostException) {
+                        System.out.println("Unknown host! Press any key to continue...");
+                        scanner.nextLine();
+                    } else {
+                        throw new RuntimeException(ioe);
+                    }
+                } catch (NumberFormatException nfe) {
+                    System.out.println("Invalid port number! Press any key to continue...");
+                    scanner.nextLine();
+                } catch (IllegalArgumentException iae) {
+                    System.out.println("Wrong connection data! Press any key to continue...");
+                    scanner.nextLine();
+                }
+            } else if (cmdArr[0].equals("/quit")) {
+                System.exit(0);
+            } else {
+                System.out.println("Invalid command! Press any key to continue...");
+                scanner.nextLine();
             }
         }
     }
@@ -43,17 +64,25 @@ public class ChatClient {
 
             Thread receiveThread = new Thread(
                     () -> {
-                        try (var buff = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
-                            String line;
-                            while ((line = buff.readLine()) != null) {
-                                System.out.println(line);
+                        try (BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
+                            while (socket.isConnected() && !socket.isClosed()) {
+                                String msg = reader.readLine();
+                                if (msg == null) {
+                                    System.out.println("Connection to the server has been terminated! Press any key to continue...");
+                                    scanner.nextLine();
+                                    break;
+                                }
+                                System.out.println(msg);
+                            }
+                        } catch (SocketException se) {
+                            if(socket.isClosed() || !socket.isConnected()) {
+                                System.out.println("Connection to the server has been terminated! Press any key to continue...");
+                                scanner.nextLine();
+                            } else {
+                                throw new RuntimeException(se);
                             }
                         } catch (IOException ioe) {
-                            if(ioe instanceof SocketException && (socket.isClosed() || !socket.isConnected())) {
-                                System.out.println("Connection to the server has been terminated!");
-                            } else {
-                                throw new RuntimeException(ioe);
-                            }
+                            throw new RuntimeException(ioe);
                         }
                     }
             );
@@ -91,7 +120,7 @@ public class ChatClient {
     private void sendMessage(String data) {
         try {
             DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream());
-            outputStream.writeBytes(data);
+            outputStream.writeBytes(data + '\n');
         } catch (IOException ioe) {
             throw new RuntimeException(ioe);
         }
