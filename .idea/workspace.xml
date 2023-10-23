@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23df1f5d-d49c-4138-bf85-baaa5664546b" name="Changes" comment="change package name">
+    <list default="true" id="23df1f5d-d49c-4138-bf85-baaa5664546b" name="Changes" comment="add color to exceptions in main">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/chat_client/client/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/chat_client/client/ConnectionInitiator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chat_client/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat_client/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat_client/client/ChatClient.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +78,9 @@
       <option name="presentableId" value="Default" />
       <updated>1697899244759</updated>
       <workItem from="1697899245902" duration="14734000" />
-      <workItem from="1697971945725" duration="2252000" />
+      <workItem from="1697971945725" duration="2844000" />
+      <workItem from="1697990093912" duration="5850000" />
+      <workItem from="1698064975356" duration="4404000" />
     </task>
     <task id="LOCAL-00001" summary="chat server">
       <created>1697917901489</created>
