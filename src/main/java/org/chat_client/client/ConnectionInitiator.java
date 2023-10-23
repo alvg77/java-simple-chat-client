@@ -10,6 +10,7 @@ public class ConnectionInitiator {
     public ConnectionInitiator() {
         scanner = new Scanner(System.in);
     }
+
     public void initiateConnection() {
         while (true) {
             try {
@@ -18,10 +19,10 @@ public class ConnectionInitiator {
                 System.out.println("Failed to clear the screen");
             }
 
-            System.out.println("Connect to the server with /connect <hostname> <port>");
+            System.out.println("Connect to the server with /connect <hostname>:<port>");
             System.out.println("Type /quit to exit the program.");
             String command = scanner.nextLine();
-            String[] cmdArr = command.split(" ");
+            String[] cmdArr = command.split("[ :]");
 
             if (cmdArr[0].equals("/connect") && cmdArr.length == 3) {
                 Optional<Socket> socket = initSocket(cmdArr);

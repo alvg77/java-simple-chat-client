@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23df1f5d-d49c-4138-bf85-baaa5664546b" name="Changes" comment="add color to exceptions in main">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chat_client/client/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chat_client/client/ConnectionInitiator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat_client/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat_client/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat_client/client/ChatClient.java" beforeDir="false" />
-    </list>
+    <list default="true" id="23df1f5d-d49c-4138-bf85-baaa5664546b" name="Changes" comment="remove useless checks" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +73,7 @@
       <workItem from="1697899245902" duration="14734000" />
       <workItem from="1697971945725" duration="2844000" />
       <workItem from="1697990093912" duration="5850000" />
-      <workItem from="1698064975356" duration="4404000" />
+      <workItem from="1698064975356" duration="4944000" />
     </task>
     <task id="LOCAL-00001" summary="chat server">
       <created>1697917901489</created>
@@ -110,7 +103,21 @@
       <option name="project" value="LOCAL" />
       <updated>1697973410520</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="refactor and rewrite client">
+      <created>1698082856750</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698082856750</updated>
+    </task>
+    <task id="LOCAL-00006" summary="remove useless checks">
+      <created>1698083145323</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698083145323</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +137,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chat server" />
     <MESSAGE value="change package name" />
-    <option name="LAST_COMMIT_MESSAGE" value="change package name" />
+    <MESSAGE value="refactor and rewrite client" />
+    <MESSAGE value="remove useless checks" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove useless checks" />
   </component>
 </project>

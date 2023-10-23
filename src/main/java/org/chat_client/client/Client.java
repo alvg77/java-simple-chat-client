@@ -41,9 +41,9 @@ public class Client {
     public void start() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter your username with /username");
+        System.out.println("Enter your username with /nick");
         System.out.println("Enter your message with /msg");
-        System.out.println("Exit with /exit");
+        System.out.println("Exit with /quit");
 
         receiveThread.start();
 
@@ -56,7 +56,7 @@ public class Client {
 
     private void parseMsgType(String[] msgArr) {
         switch (msgArr[0]) {
-            case "/username":
+            case "/nick":
                 username = msgArr[1];
                 break;
             case "/msg":
@@ -66,7 +66,7 @@ public class Client {
                 }
                 sendMessage(username + ": " + msgArr[1]);
                 break;
-            case "/exit":
+            case "/quit":
                 close();
                 return;
             default:
