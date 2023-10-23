@@ -57,17 +57,10 @@ public class Client {
     private void parseMsgType(String[] msgArr) {
         switch (msgArr[0]) {
             case "/username":
-                if (msgArr.length != 2) {
-                    System.out.println("Invalid invocation of /username!");
-                    break;
-                }
                 username = msgArr[1];
                 break;
             case "/msg":
-                if (msgArr.length < 2) {
-                    System.out.println("Invalid invocation of /msg!");
-                    break;
-                } if (username.isEmpty()) {
+                if (username.isEmpty()) {
                     System.out.println("-----------------!!Specify username first!!-----------------");
                     break;
                 }
