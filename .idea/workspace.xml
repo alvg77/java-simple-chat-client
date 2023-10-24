@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23df1f5d-d49c-4138-bf85-baaa5664546b" name="Changes" comment="remove useless checks" />
+    <list default="true" id="23df1f5d-d49c-4138-bf85-baaa5664546b" name="Changes" comment="change interface commands">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +75,8 @@
       <workItem from="1697899245902" duration="14734000" />
       <workItem from="1697971945725" duration="2844000" />
       <workItem from="1697990093912" duration="5850000" />
-      <workItem from="1698064975356" duration="4944000" />
+      <workItem from="1698064975356" duration="5258000" />
+      <workItem from="1698142040949" duration="365000" />
     </task>
     <task id="LOCAL-00001" summary="chat server">
       <created>1697917901489</created>
@@ -117,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698083145323</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="change interface commands">
+      <created>1698083469008</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698083469008</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +149,7 @@
     <MESSAGE value="change package name" />
     <MESSAGE value="refactor and rewrite client" />
     <MESSAGE value="remove useless checks" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove useless checks" />
+    <MESSAGE value="change interface commands" />
+    <option name="LAST_COMMIT_MESSAGE" value="change interface commands" />
   </component>
 </project>
