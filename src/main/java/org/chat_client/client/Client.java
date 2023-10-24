@@ -17,8 +17,8 @@ public class Client {
             while (!socket.isClosed() && (data = bufferedReader.readLine()) != null) {
                 System.out.println(data);
             }
+            close();
         } catch (IOException ioe) {
-            System.out.println("You have been disconnected from the server.");
             close();
         }
     });
@@ -51,11 +51,8 @@ public class Client {
             String msg = scanner.nextLine();
             String[] msgArr = msg.split(" ", 2);
             parseMsgType(msgArr);
-            if (!receiveThread.isAlive()) {
-                System.out.println("You have been disconnected from the server.");
-                close();
-            }
         }
+        System.out.println("You have been disconnected from the server.");
     }
 
     private void parseMsgType(String[] msgArr) {
